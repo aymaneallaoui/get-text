@@ -1,7 +1,7 @@
 import { createWorker } from "tesseract.js";
 
 const convertor = async (img: string) => {
-  const worker = await createWorker("eng");
+  const worker = await createWorker("fr");
   const ret = await worker.recognize(img);
   const text = ret.data.text;
   await worker.terminate();
